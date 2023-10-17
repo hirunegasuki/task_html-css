@@ -1,0 +1,377 @@
+@charset "UTF-8";
+
+html, body, div, h1, h2, p, ul, li {
+   margin: 0;
+   padding: 0;
+}
+body {
+   font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   color: #333;
+   -webkit-font-smoothing: antialiased;
+}
+*, *:before, *:after {
+   word-break: break-all;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+ol, ul, li {
+   list-style: none;
+}
+a {
+   text-decoration: none;
+   cursor: pointer;
+}
+img {
+   border: 0;
+   vertical-align: middle;
+}
+header {
+   width: 100%;
+   padding: 20px 0;
+   position: absolute;
+}
+header .HeaderWrap {
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   max-width: 100%;
+   margin: 0 36px;
+}
+header .HeaderWrap>*:last-child {
+   display: inline-flex;
+}
+header .logo {
+   align-self: center;
+   transition: opacity .2s;
+}
+header .logo img { 
+   width: auto;
+   height: 20px;
+}
+
+header .HamburgerMenu {
+   display: none;
+}
+header .Menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   white-space: nowrap;
+}
+header .Menu li {
+   margin-right: 45px;
+   transition: opacity .2s;
+}
+header .Menu li:last-of-type {
+   margin-right: 0;
+   width: 100%;
+}
+header .Menu a {
+   display: block;
+}
+header .Menu li span {
+   display: block;
+   text-align: center;
+   font-weight: 700;
+   color: #333;
+}
+header .Menu li span:first-child {
+   font-family: "Lato",sans-serif;   
+}
+header .Menu li span:last-child {
+   font-size: 10px;
+}
+header .Menu li a:hover {
+   opacity: .85; 
+}
+header .Menu .MenuList_Button {
+   background-color: #f79214;
+   border-radius: 38px;
+   font-size: 12px;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   /*width: 100%;*/
+   height: 40px;
+   padding: 0 20px;
+}
+header .Menu .MenuList_Button:hover, #main .fv .fv_message .fv_button:hover {
+   opacity: .8;
+}
+#main {
+   overflow: hidden;
+}
+#main .fv>img {
+   background-image: none;
+   display: none;
+   width: 100%;
+}
+#main .fv {
+   background-image: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
+   background-size: cover;
+   background-position: center;
+   padding: 100px 0 28px 0;
+}
+#main .content_wrap {
+   max-width: 1140px;
+   margin: 0 auto;
+   padding: 0 50px;
+   position: relative;   
+}
+#main .fv .fv_message {
+   width: fit-content;
+   margin-bottom: 70px;
+}
+#main .fv .fv_message h2 {
+   font-family: "Lato",sans-serif;
+   font-size: 38px;
+   font-weight: 700;
+   line-height: 54px;
+   text-align: center;
+   margin-bottom: 15px;
+}
+#main .fv .fv_message .fv_image {
+   display: flex;
+   margin-bottom: 25px;
+}
+#main .fv .fv_message .fv_image img {
+   margin-right: 8px;
+}
+#main .fv .fv_message .fv_image img:last-of-type {
+   margin-right: 0;
+}
+#main .fv .fv_message .fv_button {
+   background-color: #f79214;
+   border-radius: 38px;
+   font-size: 16px;
+   font-weight: 700;
+   color: #fff;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 64px;
+   transition:  opacity .2s;
+}
+#main .fv .fv_message_sub, #main .fv .fv_message_sub a {
+   font-size: 12px;
+   color: #a2a2a4;
+}
+#main .about {
+   background-color: #f79214;
+   padding: 44px 0;
+   /*margin-bottom: 400px;/*あとで消す*/
+}
+#main .about_wrap {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+#main .about_wrap video {
+   width: 50%;
+}
+#main .about_message {
+   width: 100%;
+   margin-left: 32px;
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+}
+#main .about_message h2 {
+   font-size: 38px;
+   font-weight: 900;
+   color: #fff;
+   line-height: 54px;
+   letter-spacing: .1em;
+   margin-bottom: 8px;
+}
+#main .about_message h2 span {
+   font-family: "Lato",sans-serif;
+}
+#main .about_message h2 br {
+   display: none;
+}
+#main .about_message p {
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 26px;
+   margin-bottom: 24px;
+   color: #fff;
+}
+#main .about_message a img {
+   width: 158px
+}
+
+ /* 画面サイズ1024px以下 */
+ @media screen and (max-width: 1024px) {
+   header {
+      background-color: #fff;
+      position: fixed;
+      z-index: 1;
+   }
+   header .HamburgerMenu {
+      position: relative;
+      display: block;
+      width: 30px;
+      height: 21px;
+      cursor: pointer;
+   }
+    header .HamburgerMenu span {
+       position: absolute;
+       left: 0;
+       display: block;
+       width: 100%;
+       height: 3px;
+       border-radius: 10px;
+       background-color: #333;
+   }
+   header .HamburgerMenu span:nth-child(1) {
+       top: 0;
+   }
+   header .HamburgerMenu span:nth-child(2) {
+       top: 50%;
+   }
+   header .HamburgerMenu span:nth-child(3) {
+       top: 100%;
+   }
+   header .Menu {
+      background-color: rgba(0,0,0,.8);
+      position: fixed;
+      top: 60px;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: 20px 0 75px 0;
+      transform: translateX(100%);
+      transition: transform .5s;
+      overflow-y: scroll;
+      z-index: 2;
+   }
+   header .Menu li {
+      padding: 20px 0;
+      margin-right: 0;
+   }
+   header .Menu li span:first-child {
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: 5px;
+   }
+   header .Menu li span:last-child {
+      font-size: 12px;
+      color: #f79214;
+      letter-spacing: 2px;
+      margin-top: 10px;
+   }
+   header .Menu li:last-of-type {
+     margin-top: 20px;
+   }
+   header .Menu .MenuList_Button {
+     font-size: 16px;
+     width: 250px;
+     height: 60px;
+     margin:  0 auto;
+     padding: 0;
+   }
+ /* ハンバーガーメニューのactive状態 */
+   header .HamburgerMenu.active {
+      transition: transform .5s;
+   }
+   header .HamburgerMenu.active span:nth-child(1) {
+      top: 50%;
+      transform: rotate(45deg);
+   }
+   header .HamburgerMenu.active span:nth-child(2) {
+      opacity: 0;
+   }
+   header .HamburgerMenu.active span:nth-child(3) {
+      top: 50%;
+      transform: rotate(-45deg);
+   }
+   header .Menu.active {
+      transform: translate3d(-100%,0,0);
+   }
+   #main {
+      padding-top: 60px;
+   }
+   #main .about_wrap {
+      flex-direction: column;
+   }
+   #main .about_wrap video {
+      width: 75%;
+      margin-bottom: 16px;
+   }
+   #main .about_message {
+      width: 75%;
+      margin-left: 0;
+   }
+   #main .about_message p {
+      margin-bottom: 32px;
+   }
+   #main .about_message a {
+      margin: 0 auto;
+   }
+}
+
+ /* 画面サイズ767px以下 */
+ @media screen and (max-width: 767px) {
+   header .HeaderWrap {
+      margin: 0 20px;
+      max-width: 100%;
+   }
+   #main {
+      padding-top: 52px;
+   }
+   #main .fv {
+      background-image: none;
+      padding: 0 0 35px 0;
+   }
+   #main .fv img {
+      display: block;
+   }
+   #main .fv .fv_wrap {
+      padding: 0 20px;
+      margin-top: -45vw;
+      max-width: none;
+   }
+   #main .fv .fv_message {
+      margin-bottom: 20px;
+      width: 100%;
+   }
+   #main .fv .fv_message h2 {
+      font-size: 25px;
+      line-height: 36px;
+      margin-right: calc(((100vw - 100%)/2)*-1);
+      margin-left: calc(((100vw - 100%)/2)*-1);
+   }
+   #main .fv .fv_message .fv_image {
+      justify-content: space-between;
+      margin-bottom: 30px;
+      width: 100%;
+   }
+   #main .fv .fv_message .fv_image img {
+      width: 27.5%;
+   }
+   #main .fv .fv_message .fv_image img:nth-of-type(2) {
+      width: 40%;
+   }
+   #main .about {
+      padding: 30px 0;
+   }
+   #main .about_wrap {
+      padding: 0 20px;
+      max-width: none;
+   }
+   #main .about_wrap video {
+      width: 100%;
+   }
+   #main .about_message {
+      width: 100%;
+      margin-bottom: 0;
+   }
+}
